@@ -1,0 +1,25 @@
+{
+    "pylint.args": [
+        "--django-settings-module=conf.settings.development",
+        "--load-plugins", "pylint_django"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "remote.SSH.defaultForwardedPorts": [{
+        "localPort": 8000,
+        "remotePort": 8000,
+        "name": "Django"
+    }, {
+        "localPort": 5173,
+        "remotePort": 5173,
+        "name": "Vite"
+    }],
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "javascript": "javascript",
+        "css": "css"
+    },
+    "editor.quickSuggestions": {
+        "strings": true
+    }
+}
