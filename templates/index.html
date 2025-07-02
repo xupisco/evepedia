@@ -23,6 +23,37 @@
 
 <section class="container mx-auto" id="highlights">
     <div class="my-3">
+      <div class="text-xl pb-3">Market</div>
+      <div class="flex flex-wrap gap-2">
+
+        {% for group in market %}
+          <div class="collapse collapse-plus bg-base-300">
+            <input type="radio" name="my-accordion-{{ group.parent_group_id }}" />
+            <div class="collapse-title font-semibold">{{ group.name }}</div>
+            <div class="collapse-content text-sm">
+              {% for sub in group.get_children %}
+                <div class="collapse collapse-plus bg-base-300">
+                  <input type="radio" name="my-accordion-{{ sub.parent_group_id }}" />
+                  <div class="collapse-title font-semibold">{{ sub.name }}</div>
+                  <div class="collapse-content text-sm">
+                    <ul>
+                    {% for subb in sub.get_children %}
+                      <li>{{ subb.name }}</li>
+                    {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
+
+<section class="container mx-auto" id="highlights">
+    <div class="my-3">
+      <div class="text-xl pb-3">Categories</div>
       <div class="flex flex-wrap gap-2">
           {% for category in categories %}
             <a class="btn btn-primary p-3" href="/{{ category.category_id }}">{{ category.name }}</a>
