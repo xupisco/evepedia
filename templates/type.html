@@ -12,8 +12,7 @@
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">{{ request.site.name }}</h1>
           <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-            quasi. In deleniti eaque aut repudiandae et a id nisi.
+            {{ category.name }} / {{ group.name }} / {{ object.name }}
           </p>
         </div>
       </div>
@@ -24,9 +23,7 @@
 <section class="container mx-auto" id="highlights">
     <div class="my-3">
       <div class="flex flex-wrap gap-2">
-          {% for category in categories %}
-            <a class="btn btn-primary p-3" href="/{{ category.category_id }}">{{ category.name }}</a>
-          {% endfor %}
+        Salame
       </div>
     </div>
 </section>

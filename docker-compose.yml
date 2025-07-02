@@ -1,8 +1,8 @@
-name: awesome_app
+name: evepedia
 
 services:
   front:
-    image: awesome_app/front
+    image: evepedia/front
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -15,7 +15,7 @@ services:
     command: npm run dev -- --host
 
   app:
-    image: awesome_app/app
+    image: evepedia/app
     build:
       context: .
       dockerfile: Dockerfile.dev

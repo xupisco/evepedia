@@ -19,3 +19,4 @@ djangoql
 markdown
 django-tinymce
 django-cotton
+esi-client
